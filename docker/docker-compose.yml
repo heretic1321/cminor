@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   djs-bot:
@@ -43,15 +43,15 @@ services:
     container_name: postgres
     restart: unless-stopped
     environment:
-      POSTGRES_PASSWORD:  root
-      POSTGRES_USER:      root
-      POSTGRES_DB:        base
-      PGPORT:             5432
+      POSTGRES_PASSWORD: root
+      POSTGRES_USER: root
+      POSTGRES_DB: base
+      PGPORT: 5432
     volumes:
       - postgres_data:/var/lib/postgresql/data
 
   lavalink:
-    image: fredboat/lavalink:3.7.12
+    image: ghcr.io/lavalink-devs/lavalink@sha256:38e42ce67615efe6424b5e45c86daaf8a990c97ed09b6b2fe5f2b94d07a52406
     container_name: lavalink
     restart: unless-stopped
     hostname: docker.lavalink
